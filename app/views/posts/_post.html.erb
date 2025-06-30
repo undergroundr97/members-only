@@ -1,12 +1,15 @@
-<div id="<%= dom_id post %>">
-  <p>
-    <strong>Title:</strong>
-    <%= post.title %>
-  </p>
+<div id="all_posts">
 
-  <p>
-    <strong>Content:</strong>
-    <%= post.content %>
-  </p>
+<div class="post-title"><%= post.title %></div>
 
+
+
+    <div class="post-content"><%= post.content %></div>
+  <%if user_signed_in?%>
+  <p>
+    <strong>Author</strong>
+    <% author = User.find(post.user_id)%>
+    <%= author.name%>
+  </p>
+  <%end%>
 </div>

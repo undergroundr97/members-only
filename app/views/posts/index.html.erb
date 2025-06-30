@@ -6,11 +6,12 @@
 
 <div id="posts">
   <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
+    <div class="post-container">
+      <%= render post %>
+        <%= link_to "Show this post", post %>
+    </div>
   <% end %>
+  
 </div>
 
 <%= link_to "New post", new_post_path %>

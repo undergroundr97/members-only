@@ -1,7 +1,8 @@
 <% content_for :title, "New post" %>
 
 <h1>New post</h1>
-
+<%= current_user.name%>
+<%= user_session%>
 <%= form_with model: @post do |f|%>
 <%= f.label :title, "Post Title"%>
 <%= f.text_field :title%>
@@ -9,3 +10,5 @@
 <%= f.text_field :content %>
 <%= f.submit %>
 <%end%>
+
+<%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-logout" %>

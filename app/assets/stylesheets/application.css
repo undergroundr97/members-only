@@ -8,3 +8,45 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ /* .btn {
+    width: 100px;
+    height: 200px;
+ }
+ .btn-logout {
+    background-color: black;
+ } */
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+   text-decoration: none;
+   margin: 0;
+   padding: 0;
+}
+ #all_posts {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .post-container {
+   display: flex;
+   flex-direction: column;
+   width: 300px;
+   height: 150px;
+   background-color: blue;
+   gap: 10px;
+ }
+
+ .post-title {
+   font-size: 1.5rem;
+   font-family: "Montserrat", sans-serif;
+ }
+
+.header {
+   height: 100px;
+   width: 100%;
+   position: sticky;
+   top: 0px;
+   left: 1px;
+   background-color: black;
+}
