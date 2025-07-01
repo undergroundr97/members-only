@@ -24,8 +24,14 @@
 
   <body>
     <header class="header">
+      <%= render "layouts/header" if !user_signed_in? %>
     </header>
-    <%= yield %>
-    <%= button_to 'logout', destroy_user_session_path, method: :delete%>
+    <div class="container">
+      <%= yield %>
+      <%= yield :right_side %>
+    </div>
+    <footer class="footer">
+      <%= link_to 'back to posts', posts_path%>
+    </footer>
   </body>
 </html>
