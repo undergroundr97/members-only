@@ -48,17 +48,13 @@
  }
 
 
-.container {
-   /* height: 100vh; */
-   flex-grow: 1;
-}
 
 .footer {
    width: 100%;
    height: 50px;
    background-color: rgb(139, 69, 69);
-   /* position: sticky;
-   bottom: 0px; */
+    position: sticky;
+   bottom: 0px; 
 }
 body {
    height: 100vh;
@@ -74,9 +70,10 @@ body {
    position: sticky;
    top: 0px;
    /* left: 1px; */
-   background-color: rgb(136, 111, 111);
+   background-color:#92AD94;
    display: flex;
    justify-content: space-evenly;
+   z-index: 100;
 }
 .left-side {
    display: flex;
@@ -93,4 +90,68 @@ body {
    display: grid;
    grid-template-columns: repeat(3,1fr);
    align-items: center;
+}
+
+/* MIDDLE CONTENT */
+
+.container {
+   flex-grow: 1;
+   display: grid;
+   grid-template-columns: 1fr 3fr 1fr;
+}
+
+.container .middle {
+   display: flex;
+   flex-direction: column;
+   /* align-self: center; */
+   justify-self: center;
+   flex-grow: 1;
+   /* justify-content: space-around; */
+}
+
+.post-container {
+   border: 1px solid black;
+   border-radius: 10px;
+   border-left: 2px solid gold;
+   padding: 20px;
+   background-color: aliceblue;
+   
+}
+.post-container .post-title{
+   /* font-size: 300px; */
+   filter: blur(5px);
+}
+#posts { 
+   display: grid;
+   grid-template-rows: auto;
+   gap: 100px;
+}
+#all_posts {
+   display: flex;
+}
+
+.blur{
+   filter: blur(5px);
+   /* pointer-events: none; */
+   user-select: none;
+}
+.tooltiptext {
+   visibility: hidden;
+  width: 150px;
+  /* height: 30px; */
+  font-size: 0.8rem;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  top: ;
+  z-index: 1;
+}
+.author-name:hover .tooltiptext {
+   visibility: visible;
+   transition: 0.5s;
 }

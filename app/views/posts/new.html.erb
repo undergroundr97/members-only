@@ -1,8 +1,7 @@
 <% content_for :title, "New post" %>
 
 <h1>New post</h1>
-<%= current_user.name%>
-<%= user_session%>
+
 <%= form_with model: @post do |f|%>
 <%= f.label :title, "Post Title"%>
 <%= f.text_field :title%>

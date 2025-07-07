@@ -6,6 +6,6 @@
    <div class="right-side">
        <%= content_tag :div, link_to("Home", posts_path) %>
        <%= content_tag :div, "About"%>
-       <%= content_tag :div, "Log IN"%>
+       <%= content_tag :div, link_to("Log in", new_user_session_path)%>
    </div>
 </div>

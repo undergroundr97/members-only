@@ -16,6 +16,7 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
+    <%# <script src=""></script> %>
 
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
@@ -24,14 +25,24 @@
 
   <body>
     <header class="header">
-      <%= render "layouts/header" if !user_signed_in? %>
+      <%= user_signed_in? ? render("layouts/header_logoff") : render("layouts/header") %>
+
     </header>
     <div class="container">
-      <%= yield %>
-      <%= yield :right_side %>
+      <div class="left-side">
+
+      </div>
+      <div class="middle">
+        <%= yield %>
+        </div>
+        <div class="right-side">
+          
+        </div>
     </div>
     <footer class="footer">
       <%= link_to 'back to posts', posts_path%>
+      <%= button_to 'Logout', destroy_user_session_path, method: :delete%>
     </footer>
+  
   </body>
 </html>
