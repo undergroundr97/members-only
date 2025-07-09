@@ -40,6 +40,7 @@
         </div>
     </div>
     <footer class="footer">
+      <%= link_to 'CREATE POST', new_post_path%>
       <%= link_to 'back to posts', posts_path%>
       <%= button_to 'Logout', destroy_user_session_path, method: :delete%>
     </footer>
