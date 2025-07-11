@@ -1,0 +1,5 @@
+<div class="left-logged-in">
+    <h1>Greetings, <%= current_user.name%>!</h1>
+    <h2>Interact by posting something fun about your pet!</h2>
+    <%= link_to("Create Post", new_post_path, class: "create-post-btn")%>
+</div>

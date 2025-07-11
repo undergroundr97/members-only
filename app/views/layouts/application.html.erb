@@ -30,7 +30,7 @@
     </header>
     <div class="container">
       <div class="left-side-page">
-        <%= render("layouts/left_login")%>
+        <%= user_signed_in? ? render("layouts/left_loggedin") : render("layouts/left_login")%>
       </div>
       <div class="middle">
         <%= yield %>
