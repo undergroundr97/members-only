@@ -6,8 +6,9 @@
 <div id="posts">
   <% @posts.each do |post| %>
     <div class="post-container">
+    <%= link_to post do %>
       <%= render post %>
-        <%= link_to "Show this post", post %>
+    <%end%>
     </div>
   <% end %>
   
