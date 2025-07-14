@@ -35,8 +35,8 @@
       <div class="middle">
         <%= yield %>
         </div>
-        <div class="right-side">
-          
+        <div class="right-side-page">
+          <%= render ("layouts/right-side-logged") if user_signed_in?%>
         </div>
     </div>
     <footer class="footer">

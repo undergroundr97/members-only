@@ -1,0 +1,7 @@
+<div class="right-side-recent">
+    <%  @posts.last(4).reverse.each do |post| %>
+    <div class="last-four-posts">
+        <%= post.title%>
+    </div>
+    <%end%> 
+</div>

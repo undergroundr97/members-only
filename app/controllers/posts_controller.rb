@@ -63,7 +63,9 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  # def last_four
+  #   @posts.reverse.take(4)
+  # end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
