@@ -1,7 +1,12 @@
 <div class="right-side-recent">
-    <%  @posts.last(4).reverse.each do |post| %>
-    <div class="last-four-posts">
-        <%= post.title%>
+    <div class="right-side-title">
+        <h1> Latests Posts! </h1>
     </div>
+    <%  @posts.last(4).reverse.each do |post| %>
+    <%= link_to post do %>
+        <div class="last-four-posts">
+            <%= post.title%>
+        </div>
+        <%end %>
     <%end%> 
 </div>

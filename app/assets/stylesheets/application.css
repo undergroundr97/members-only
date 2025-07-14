@@ -23,7 +23,9 @@
    margin: 0;
    padding: 0;
 }
- 
+ html {
+   scrollbar-gutter: stable;
+ }
 a, a:visited, a:hover, a:active {
    color: inherit;
  }
@@ -47,6 +49,7 @@ body {
    height: 100vh;
    display: flex;
    flex-direction: column;
+   overflow-y: scroll;
 }
 
 /*  HEADER ELEMENTS */
@@ -98,7 +101,8 @@ body {
    align-items: center;
    flex-grow: 1;
    width: 100%;
-   
+   box-sizing: border-box;
+   overflow: hidden;
 }
 
 .post-container {
@@ -128,6 +132,17 @@ body {
    transform: translatey(-3px);
 
 }
+.post-title {
+   height: 30px;
+   display: -webkit-box;
+   -webkit-line-clamp: 1;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   /* overflow-x: hidden; */
+   -webkit-overflow-scrolling: ;
+   /* overflow: hidden; */
+   word-break: break-all;
+}
 
 .post-content {
    display: -webkit-box;
@@ -147,15 +162,18 @@ body {
    padding-top: 10px;
    padding-bottom: 10px;
    display: grid;
-   grid-template-rows: auto;
+   /* grid-row: 200px; */
+   grid-auto-rows: 180px;
+   /* border: 1px solid #ccc; */
    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   column-gap: 1px;
    row-gap: 20px;
    /* background-color: #36743a; */
    flex-grow: 1;
    width: inherit;
    /* padding-top: 20px; */
    align-items: center;
-
+   box-sizing: border-box;
    
 }
 
@@ -203,7 +221,7 @@ body {
 .left-login h2 {
    align-self: center;
 }
-.left-login, .left-logged-in {
+.left-login, .left-logged-in  {
    display: flex;
    flex-direction: column;
    /* grid-auto-rows: auto; */
@@ -223,3 +241,47 @@ body {
 }
 
 /* RIGHT SIDE CONTENT */
+.right-side-page {
+   display: flex;
+   flex-direction: column;
+   /* align-items: center; */
+   /* justify-content: space-evenly; */
+}
+.right-side-title h1{
+   display: flex;
+   align-items: flex-end;
+   justify-content: flex-end; 
+   justify-items: flex-end;
+    transform: translateY(50%);
+}
+.right-side-recent {
+   display: grid;
+   grid-template-columns: 1fr;
+   /* grid-template-rows: repeat(5, minmax(1fr, 250px)); */
+   grid-auto-rows: 100px;
+   row-gap: 50px;
+   /* row-gap: 30px; */
+   /* grid-row: repeat(5, minmax(2fr, 200px); */
+   /* grid-template-rows: repeat(auto-fit,minmax(120px, 0.8fr)); */
+   /* gap: 20px; */
+   /* justify-content: space-evenly; */
+   /* flex-direction: column; */
+    position: sticky;
+   top: 80px; 
+   /* height: 750px; */
+   align-items: center;
+   justify-content: center;
+   justify-items: center;
+   /* width: 100%; */
+}
+.last-four-posts {
+   /* justify-self: ; */
+   height: 120px;
+   width: 200px;
+   border: 1px solid black;
+   /* width: 250px; */
+   margin-right: 20px;
+   align-items: center;
+   justify-self: center;
+
+}
