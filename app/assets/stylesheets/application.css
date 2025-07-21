@@ -149,6 +149,9 @@ body {
    flex-direction: column;
    align-items: flex-end;
 }
+.paw-icon {
+   height: 15px;
+}
 #all_posts {
    display: grid; 
    grid-template-rows: 0.5fr 1.2fr 0.5fr;
