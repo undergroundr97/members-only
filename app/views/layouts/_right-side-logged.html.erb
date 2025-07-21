@@ -1,8 +1,8 @@
 <div class="right-side-recent">
     <div class="right-side-title">
-        <h1> Latests Posts! </h1>
+        <h1> Random posts! </h1>
     </div>
-    <%  @posts.last(4).reverse.each do |post| %>
+    <%  @posts.sample(4).reverse.each do |post| %>
     <%= link_to post do %>
         <div class="last-four-posts">
             <%= post.title%>
