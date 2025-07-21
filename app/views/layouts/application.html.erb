@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Members Only" %></title>
+    <title><%= "Members Only" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -42,9 +42,7 @@
 </div>
     </div>
     <footer class="footer">
-      <%= link_to 'CREATE POST', new_post_path%>
-      <%= link_to 'back to posts', posts_path%>
-      <%= button_to 'Logout', destroy_user_session_path, method: :delete%>
+      <%= render "layouts/footer"%>
     </footer>
   
   </body>
