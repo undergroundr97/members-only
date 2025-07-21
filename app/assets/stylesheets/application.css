@@ -209,6 +209,7 @@ body {
 
 
 .blur{
+   position: inherit;
    filter: blur(5px);
    /* pointer-events: none; */
    user-select: none;
@@ -226,7 +227,8 @@ body {
 
   /* Position the tooltip */
   position: absolute;
-  top: ;
+  bottom: 38px;
+  /* top: ; */
   z-index: 1;
   /* transition: 1s; */
 }
