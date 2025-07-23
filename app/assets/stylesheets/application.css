@@ -36,10 +36,7 @@ a, a:visited, a:hover, a:active {
  }
 
 
- .post-title {
-   font-size: 1.5rem;
-   font-family: "bright";
- }
+
 
 
 
@@ -151,7 +148,7 @@ body {
    align-items: flex-end;
 }
 .paw-icon {
-   height: 15px;
+   height: 20px;
 }
 #all_posts {
    display: grid; 
@@ -173,8 +170,9 @@ body {
    overflow: hidden;
    /* overflow-x: hidden; */
    -webkit-overflow-scrolling: ;
-   /* overflow: hidden; */
    word-break: break-all;
+   font-size: 1.5rem;
+   font-family: "bright";
 }
 
 .post-content {
@@ -248,12 +246,16 @@ body {
    /* align-items: flex-start; */
 }
 .blur {
-   transform: translateX(-400%);
+   transform: translateX(-420%);
    position: absolute;
+}
+.name {
+   margin-left: 5px;
 }
 .author-card-name {
    /* text-align: center; */
    display: flex;
+   gap: 0px;
    align-items: center;
    justify-items: center;
    align-content: center;
@@ -354,18 +356,29 @@ body {
    height: 50px;
    width: 200px;
    border: 1px solid black;
-   /* width: 250px; */
+
    margin-right: 20px;
-   align-items: center;
-   justify-self: center;
    border-radius: 10px;
    display: flex;
    align-items: center;
    justify-content: center;
    background-color: #FDE2FF;
    font-size: 20px;
+   overflow: hidden; 
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   word-break: break-all;
+   /* font-size: 1.5rem; */
+   font-family: "bright";
+   padding: 5px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   text-align: center;
 }
-
+.last-four-posts:hover {
+   transform: translatey(-3px);
+}
 /* FOOTER CONTENT */
 
 .footer {

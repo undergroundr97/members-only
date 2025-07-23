@@ -12,7 +12,7 @@
         <div class="setrad-call">
           <span class="author-name <%= 'tooltip' if !user_signed_in?%>">
             <span class="<%= 'tooltiptext' if !user_signed_in?%>"> <%= user_signed_in? ? "" : "Log in to see the author!"%></span>
-             <span class="<%= 'blur' if !user_signed_in?%>"><%= author.name%></span>
+             <span class="<%= 'blur' if !user_signed_in?%> name"><%= author.name%></span>
           
           </span>
         </div>
