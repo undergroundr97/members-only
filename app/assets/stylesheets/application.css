@@ -127,12 +127,13 @@ body {
    width: 100%;
    box-sizing: border-box;
    overflow: hidden;
+   padding: 10px;
 }
 
 .post-container {
-   border: 1px solid black;
+   border: 3px ridge black;
    border-radius: 10px;
-   border-left: 2px solid gold;
+   /* border-left: 2px solid gold; */
    padding: 1em;
    background-color: #F8F7FF;
    height: 130px;
@@ -157,7 +158,7 @@ body {
    grid-template-rows: 0.5fr 1.2fr 0.5fr;
     gap: 10px; 
     flex-grow: 1;
-
+   /* padding: ; */
 } 
 
 .post-container:hover {
@@ -228,16 +229,35 @@ body {
   border-radius: 6px;
   padding: 5px 0;
 
-  /* Position the tooltip */
-  position: absolute;
-  bottom: 38px;
+  position: relative;
+  /* bottom: 38px; */
   /* top: ; */
   z-index: 1;
-  /* transition: 1s; */
+  margin-left: 5px;
+  margin-bottom: 200px;
 }
 .author-name:hover .tooltiptext {
    visibility: visible;
    transition: 1s;
+
+}
+.setrad-call {
+   display: flex;
+   
+   /* grid-template-columns: 1fr; */
+   /* align-items: flex-start; */
+}
+.blur {
+   transform: translateX(-400%);
+   position: absolute;
+}
+.author-card-name {
+   /* text-align: center; */
+   display: flex;
+   align-items: center;
+   justify-items: center;
+   align-content: center;
+   position: relative;
 }
 /* LEFT-SIDE CONTENT */
 .left-login a:hover{
