@@ -375,6 +375,7 @@ body {
    padding: 5px;
    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
    text-align: center;
+   transition: 0.5s;
 }
 .last-four-posts:hover {
    transform: translatey(-3px);
@@ -399,4 +400,56 @@ body {
    align-items: center;
    justify-self: center;
    gap: 5px;
+}
+
+/* REGISTRATION */
+
+.create-account {
+   /* display: flex; */
+   border: 2px solid black;
+   padding: 20px;
+   border-radius: 10px;
+   /* height: 50vh; */
+   background-color: #ffffff;
+    transform:scale(1.5); 
+   height: calc(50%-20px);
+
+}
+.create-account input{
+   display: flex;
+   border: none;
+   appearance: none;
+   width: 250px;
+   padding: 10px;
+   background-color: #fff;
+   outline: none;
+   /* border-radius: 20px; */
+
+   background: 
+   linear-gradient(90deg, #ccc, #ccc) left bottom/100% 2px no-repeat,
+   linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat
+   ;
+}
+
+
+input::placeholder{
+   color: #222;
+   transition: color 0.3s ease;
+}
+input:focus::placeholder {
+   color: transparent
+}
+
+.sign-up-btn:hover {
+   cursor: pointer;
+   
+}
+
+.registration-title{
+   position: relative;
+   top: -30px;
+   background-color: #fff;
+   padding: 5px;
+   border-radius: 20px;
+   user-select: none;
 }
