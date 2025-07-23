@@ -7,21 +7,21 @@
   
   <div class = "field">
     <%# <%= f.label :name, "name" %>  
-    <%= f.text_field :name, autofocus: true, placeholder: 'Name'%>
+    <%= f.text_field :name, autofocus: true, placeholder: 'Name', required: true%>
   </div>
     <div class="field">
       <%# <%= f.label :email %> <br>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', disabled: true %>
     </div>
   
     <div class="field">
       <Br>
-      <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password' %>
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password', required: true %>
     </div>
   
     <div class="field">
       <br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Confirm Password' %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Confirm Password', required: true%>
     </div>
   
     <div class="actions">

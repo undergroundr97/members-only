@@ -426,11 +426,16 @@ body {
    /* border-radius: 20px; */
 
    background: 
+   linear-gradient(90deg, #222, #222) center bottom /0 2px no-repeat,
    linear-gradient(90deg, #ccc, #ccc) left bottom/100% 2px no-repeat,
    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat
    ;
+   transition: background-size 0.3s ease;
 }
-
+.create-account input:valid, 
+.create-account input:focus {
+   background-size: 100% 2px, 100% 2px, 100%;
+}
 
 input::placeholder{
    color: #222;
@@ -442,7 +447,10 @@ input:focus::placeholder {
 
 .sign-up-btn:hover {
    cursor: pointer;
-   
+   background: none
+}
+.sign-up-btn {
+   background: none !important;
 }
 
 .registration-title{
