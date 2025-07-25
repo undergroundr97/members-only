@@ -29,7 +29,9 @@
       <br>
       <%= f.submit "Sign up", class: 'sign-up-btn' %>
     </div>
+
   <% end %>
-    or 
-  <%= render "devise/shared/links" , class: 'redirect-login'%>
+    <div class="login-bottom">
+        <p>Already have an account? <br><div class="redirect-login"><%= render "devise/shared/links"%></div> </p>
+    </div>
 </div>
