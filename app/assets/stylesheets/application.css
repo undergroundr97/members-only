@@ -190,13 +190,12 @@ body {
 }
 #posts { 
    /* margin-top: 10px; */
-   padding-top: 10px;
-   padding-bottom: 10px;
+
    display: grid;
    /* grid-row: 200px; */
    grid-auto-rows: 180px;
    /* border: 1px solid #ccc; */
-   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
    column-gap: 1px;
    row-gap: 20px;
    /* background-color: #36743a; */
@@ -205,7 +204,8 @@ body {
    /* padding-top: 20px; */
    align-items: center;
    box-sizing: border-box;
-   
+   column-gap: 10px;
+   padding: 20px;
 }
 
 
@@ -225,7 +225,7 @@ body {
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 5px;
 
   position: relative;
   /* bottom: 38px; */
@@ -404,7 +404,9 @@ body {
 
 /* REGISTRATION */
 
-.create-account, .login-account{
+.create-account, 
+.login-account,
+.recovery-password{
    display: flex;
    flex-direction: column;
    border: 2px solid black;
@@ -416,7 +418,8 @@ body {
    height: calc(50%-20px);
 
 }
-.create-account input, .login-account input{
+.create-account input, .login-account input,
+.recovery-password input{
    display: flex;
    border: none;
    appearance: none;
@@ -435,7 +438,9 @@ body {
 .create-account input:valid, 
 .create-account input:focus,
 .login-account input:valid,
-.login-account input:focus {
+.login-account input:focus,
+.recovery-password input:focus,
+.recovery-password input:valid {
    background-size: 100% 2px, 100% 2px, 100%;
 }
 
@@ -447,11 +452,8 @@ input:focus::placeholder {
    color: transparent
 }
 
-.sign-up-btn:hover, .login-btn{
-   cursor: pointer;
-   /* background: none */
-}
-.sign-up-btn, .login-btn{
+
+.sign-up-btn, .login-btn, .recovery-btn{
    font-family: 'memo'  !important ;
    background: none !important;
    background-color: #f79080 !important;
@@ -459,6 +461,7 @@ input:focus::placeholder {
    border-radius: 10px !important;
    /* position: relative;left: 20px; */
    align-self: center;
+   cursor: pointer;
 
 }
 .actions {
@@ -467,7 +470,7 @@ input:focus::placeholder {
    justify-content: center;
 }
 
-.registration-title, .login-title{
+.registration-title, .login-title, .recovery-title{
    position: relative;
    top: -35px;
    background-color: #fff;
@@ -481,7 +484,7 @@ input:focus::placeholder {
    text-align: center;
 }
 
-.login-bottom {
+.login-bottom, .alternate-links{
    display: flex;
    flex-direction: column;
    text-align: center;
@@ -494,10 +497,3 @@ input:focus::placeholder {
    font-size: 20px;
 }
 
-.alternate-links{
-   display: flex;
-   flex-direction: column;
-   text-align: center;
-   margin-top: 10px;
-   gap: 10px;
-}
