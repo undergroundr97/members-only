@@ -3,4 +3,9 @@ module PostsHelper
     paws = { "Dog" => "dog.svg", "Cat" => "cat.svg" }
     image_tag(paws[pettag], class: "paw-icon")
   end
+
+  def get_author_name(user_id)
+    author = User.find(user_id)
+    author.name
+  end
 end

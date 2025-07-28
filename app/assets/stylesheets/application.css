@@ -532,7 +532,7 @@ input:focus::placeholder {
 
 .post-show-container {
    display: grid;
-   grid-template-rows: 1fr 10fr 1fr;
+   grid-template-rows: 1fr 5fr 1fr;
    height: 60vh;
    /* border: 1px solid black; */
    width: 50vw;
@@ -566,8 +566,8 @@ input:focus::placeholder {
 .post-show-tag{
    display: flex;
    /* flex-direction: column; */
-   align-items: flex-start;
-   /* border: 1px solid black; */
+   justify-content: space-between;
+   /* /* border: 1px solid black; * */
    padding: 10px;
    align-items: center;
    gap: 5px;
