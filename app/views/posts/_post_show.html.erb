@@ -1,0 +1,20 @@
+<div class="post-show-container">
+    <div class="post-show-title">
+        <%= post.title%>
+    </div>
+
+    <div class="post-show-content">
+        <%= post.content%>
+    </div>
+
+    <div class="post-show-tag">
+        Tags: <%= post.pettag%>
+        <%= paw_image_for(post.pettag)%>
+   
+        <div class="post-show-author">
+            <%= get_autor_name = User.find(post.user_id)%>
+            <%= get_autor_name.name%>
+            <%= post.user_id%>
+        </div>
+    </div>
+</div>

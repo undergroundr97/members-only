@@ -1,6 +1,6 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @post %>
+<%= render partial: "post_show", locals: { post: @post } %>
+
 
 <div>
   <%= link_to "Edit this post", edit_post_path(@post) unless !user_signed_in? %>
