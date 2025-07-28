@@ -22,8 +22,9 @@ class UsersController < ApplicationController
 
   # POST /users or /users.json
   def create
+    puts params.inspect
     @user = User.new(user_params)
-    session[:user_id] =
+
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: "User was successfully created." }
@@ -66,6 +67,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.expect(user: [ :name, :email, :password ])
+      params.expect(user: [ :name, :email, :password, :admin ])
     end
 end

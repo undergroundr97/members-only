@@ -11,7 +11,8 @@
   </div>
     <div class="field">
       <%# <%= f.label :email %> <br>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', disabled: true %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email'
+       %>
     </div>
   
     <div class="field">
@@ -24,7 +25,11 @@
       <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Confirm Password', required: true%>
       <br>
     </div>
-  
+    <div class="check-box-field">
+      <%= f.label :admin, "Want to be an admin?"%>
+      <%= f.check_box :admin, {}, true, false %>
+    </div>
+     <br>
     <div class="actions">
       <br>
       <%= f.submit "Sign up", class: 'sign-up-btn' %>

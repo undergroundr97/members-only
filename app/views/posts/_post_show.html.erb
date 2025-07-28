@@ -14,8 +14,12 @@
         </div>
    
         <div class="post-show-author">
-           Author: <%= get_author_name(post.user_id)%>
-            
+           Author: 
+           <% if user_signed_in? %>
+           <%= get_author_name(post.user_id)%>
+           <% else %>
+           <p class="log-in-author"><%= "Log In to see the Author" %></p> 
+           <% end %>
         </div>
     </div>
 </div>

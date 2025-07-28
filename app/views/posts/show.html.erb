@@ -1,10 +1,14 @@
 
 <%= render partial: "post_show", locals: { post: @post } %>
 
-
+<%puts current_user%>
 <div>
   <%= link_to "Edit this post", edit_post_path(@post) unless !user_signed_in? %>
   <%= link_to "Back to posts", posts_path %>
-
-  <%= button_to "Destroy this post", @post, method: :delete %>
+  <%if user_signed_in? && current_user.id == @post.user_id || user_signed_in? && current_user.admin == true%>
+  <%= button_to "Destroy this post", @post, method: :delete, class: 'delete-post-btn'%>
+  <% else %>
+  <%= ':D'%>
+  <%end%>
+<%# <%= > %>
 </div>
