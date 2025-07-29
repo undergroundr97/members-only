@@ -8,7 +8,7 @@ A Rails-based application for creating and managing posts with role-based access
 
 ---
 
-## 🚀 Features
+##  Features
 
 -  **User Authentication** – Sign up and log in securely.
 -  **Role Assignment** – Choose to register as an admin or a regular user.
