@@ -293,10 +293,10 @@ body {
    position: relative;
 }
 /* LEFT-SIDE CONTENT */
-.left-login a:hover{
+.left-login a:hover, .create-post-sbmt:hover, .back-post-link:hover, .edit-btn:hover, .delete-post-btn:hover{
    background-color: #f79080;
 }
-.left-login a:active{
+.left-login a:active, .create-post-sbmt:active, .back-post-link:active, .edit-btn:active, .delete-post-btn:hover{
    background-color: #f8614a;
 }
 .left-login a{
@@ -659,7 +659,7 @@ input:focus::placeholder {
    justify-content: center;
 }
 
-.registration-title, .login-title, .recovery-title{
+.registration-title, .login-title, .recovery-title, .new-post-title{
    position: relative;
    top: -35px;
    background-color: #fff;
@@ -793,5 +793,100 @@ input:focus::placeholder {
 .create-post-container {
    display: flex;
    flex-direction: column;
-   border: 1px solid blue;
+   border: 2px solid black;
+   height: 40vh;
+   padding: 20px;
+      font-size: 1.3em;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   /* justify-content: space-evenly; */
+   gap: 10px;
+   border-radius: 20px;
+}
+
+.create-post-container input[type="text"],
+.create-post-container input[type="textarea"]{
+   display: flex;
+   border: none;
+   appearance: none;
+   width: 250px;
+   padding: 15px;
+   /* background-color: #fff; */
+   border: 1px solid black;
+   outline: none;
+   /* border-radius: 20px; */
+   background-color: #fff;
+   border-radius: 20px;
+  
+   transition: background-size 0.3s ease;
+}
+
+.text-area {
+   border-radius: 20px;
+   width: 100%;
+   height: 100px;
+   padding: 10px;
+   box-sizing: border-box;
+   resize: none;
+   outline: none;
+   border: 0.1px solid black;
+
+}
+
+.create-post-sbmt {
+   padding: 15px;
+   font-size: 1em;
+   background-color: #FF715B;
+   border: none;
+   color: white;
+   font-family: 'memo';
+   border-radius: 20px;
+   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+   cursor: pointer;
+}
+
+.field-select{
+   align-self: center;
+   justify-self: center;
+   text-align: center;
+}
+.field-select input{
+   align-items: center;
+   justify-self: center;
+   text-align: center;
+}
+
+.btn-container-post-create{
+   align-self: center;
+   justify-self: center;
+}
+.form-post-create {
+   display: flex;
+   gap: 10px;
+}
+
+.errors {
+   display: flex;
+   width: 50vw;
+   height: 50px;
+   text-align: center;
+   align-items: center;
+   justify-items: center;
+   justify-content: center;
+}
+ul {
+   list-style-type: none;
+}
+#error_explanation {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   width: inherit;
+   font-size: 0.5em;
+   list-style: none;
+}
+
+#error_explanation  p {
+   font-size: 12px;
 }

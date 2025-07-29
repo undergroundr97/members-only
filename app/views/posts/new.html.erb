@@ -1,20 +1,39 @@
+<div class="errors">
+    
+    <% if @post.errors.full_messages.any? %>
+      <% @post.errors.full_messages.each do |error_message| %>
+        <%= error_message if @post.errors.full_messages.first == error_message %> <br />
+      <% end %>
+    <% end %>
+</div>
+<br>
+<br>
 
-
-<h1>New post</h1>
 
 <div class="create-post-container">
+    <div class="new-post-title">
+        New Post
+    </div>
     <%= form_with model: @post do |f|%>
-    <%= f.label :title, "Post Title"%>
-    <%= f.text_field :title%>
-    <%= f.label :content, "Description Field"%>
-    <%= f.text_field :content %>
-    <%= f.label :pettag, "Dog"%>
-    <%= f.radio_button :pettag, "Dog", checked: true %>
-    <%= f.label :pettag, "Cat"%>
-    <%= f.radio_button :pettag, "Cat"%>
-    <% %>
-    <%= f.submit %>
+    <div class="field">
+        
+        <%= f.text_field :title, placeholder: 'Title'%>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.text_area :content, placeholder: "Description", class:"text-area"%>
+    </div>
+    <br>
+    <div class="field-select">
+        <div>What is your post about? </div>
+        <%= f.label :pettag, "Dog"%>
+        <%= f.radio_button :pettag, "Dog", checked: true %>
+        <%= f.label :pettag, "Cat"%>
+        <%= f.radio_button :pettag, "Cat"%>
+    </div>
+    <br>
+    <div class="btn-container-post-create"><%= f.submit "Create Post", class: "create-post-sbmt"%></div>
     <%end%>
 </div>
 
-<%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-logout" %>
+<%= link_to "Back to posts", posts_path, class:"back-post-link" %>
