@@ -1,14 +1,23 @@
 
+
+
 <%= render partial: "post_show", locals: { post: @post } %>
 
 <%puts current_user%>
-<div>
-  <%= link_to "Edit this post", edit_post_path(@post) unless !user_signed_in? %>
-  <%= link_to "Back to posts", posts_path %>
-  <%if user_signed_in? && current_user.id == @post.user_id || user_signed_in? && current_user.admin == true%>
-  <%= button_to "Destroy this post", @post, method: :delete, class: 'delete-post-btn'%>
-  <% else %>
-  <%= ':D'%>
+<div class='post-control'>
+  <%= link_to "Back to posts", posts_path, class:"back-post-link" %>
+  <%if user_signed_in? && current_user.id == @post.user_id || user_signed_in? && current_user.admin %>
+  <%= link_to "Edit this post",edit_post_path(@post), class: "edit-btn" %>
+  <%else%>
+  <%= %>
   <%end%>
-<%# <%= > %>
 </div>
+
+<%if user_signed_in? && current_user.id == @post.user_id || user_signed_in? && current_user.admin == true%>
+            <%= button_to "Destroy this post", @post, method: :delete, form: { data: { confirm: "Are you sure you want to delete this post?"}}, class: 'delete-post-btn'%>
+         <% else %>
+        <%= %>
+        <%end%>
+
+
+
