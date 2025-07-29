@@ -658,8 +658,10 @@ input:focus::placeholder {
   
    justify-content: center;
 }
-
-.registration-title, .login-title, .recovery-title, .new-post-title{
+.edit-title {
+   z-index: 100;
+}
+.registration-title, .login-title, .recovery-title, .new-post-title, .edit-title{
    position: relative;
    top: -35px;
    background-color: #fff;
@@ -690,7 +692,7 @@ input:focus::placeholder {
 
 /* POST-SHOW-PAGE */
 
-.post-show-container {
+.post-show-container{
    display: grid;
    grid-template-rows: 1fr 5fr 1fr;
    height: 60vh;
@@ -744,7 +746,7 @@ input:focus::placeholder {
    align-self: center;
 }
 
-.delete-post-btn, .edit-btn {
+.delete-post-btn, .edit-btn{
    background-color: #FF715B;
    border-radius: 20px;
    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -890,3 +892,73 @@ ul {
 #error_explanation  p {
    font-size: 12px;
 }
+
+
+/* EDIT */
+
+.edit-post-container {
+   display: grid;
+   grid-template-rows: 1fr 5fr 1fr;
+   height: 60vh;
+   /* border: 1px solid black; */
+   width: 50vw;
+   padding: 10px 10px;
+   font-size: 2em;
+   border-radius: 20px;
+   box-sizing: border-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   /* overflow-x: hidden; */
+   -webkit-overflow-scrolling: ;
+   word-break: break-all;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.post-show-title-edit input {
+   width: 100% !important;
+   border: none;
+   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+   font-size: 1em;
+   border-radius: 20px;
+   padding: 10px;
+   box-sizing: border-box;
+   outline: none;
+   font-family: 'memo';
+}
+
+.textarea-edit {
+   outline: none;
+   box-sizing: border-box;
+   padding: 10px;
+   border-radius: 20px;
+   width: 100% !important;
+   grid-row: 2;
+   resize: none;
+   height: 30vh;
+   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+   font-size: 0.7em;
+   border: none;
+   font-family: 'memo';
+}
+
+.update-post-btn {
+   background-color: #FF715B;
+   border-radius: 20px;
+   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+   /* text-emphasis-color: white; */
+   padding: 1em 1em;
+   color: white !important;
+   border: none;
+   cursor: pointer;
+   align-self: center;
+   justify-self: center;
+   font-size: 0.6em;
+   font-family: 'memo';
+}
+
+.update-position {
+   align-self: center;
+   justify-self: center;
+
+}
+

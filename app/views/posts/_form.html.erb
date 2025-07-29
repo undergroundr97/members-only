@@ -1,27 +1,25 @@
-<%= form_with(model: post) do |form| %>
-  <% if post.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<div class="edit-post-container">
+  <%= form_with(model: post) do |form| %>
+    <div class="post-show-title-edit">
+      <%= form.text_field :title %>
+    </div>
+  <br>
+    <div class="post-show-content-edit">
+      <%= form.textarea :content, class: "textarea-edit" %>
+    </div>
+  <br>
+  <div class="pettag">
+    Pet Tag:   <br>   
 
-      <ul>
-        <% post.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+     <%= form.label :pettag, "Dog"%>
+        <%= form.radio_button :pettag, "Dog", checked: true %>
+        <%= form.label :pettag, "Cat"%>
+        <%= form.radio_button :pettag, "Cat"%>
+  </div>
+    <div class="update-position">
+      <%= form.submit "Update", class:"update-post-btn" %>
     </div>
   <% end %>
+</div>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
 
-  <div>
-    <%= form.label :content, style: "display: block" %>
-    <%= form.textarea :content %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
