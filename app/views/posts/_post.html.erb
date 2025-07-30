@@ -8,14 +8,15 @@
     </div>
   <div class="author-card-name">
     <% author = User.find(post.user_id)%>
-        <strong>Author:</strong> 
-        <div class="setrad-call">
-          <span class="author-name <%= 'tooltip' if !user_signed_in?%>">
-            <span class="<%= 'tooltiptext' if !user_signed_in?%>"> <%= user_signed_in? ? "" : "Log in to see the author!"%></span>
-             <span class="<%= 'blur' if !user_signed_in?%> name"><%= author.name%></span>
-          
-          </span>
-        </div>
+      <div class="author-holder">
+        <%if user_signed_in?%>
+         <strong>Author:</strong> <%= author.name%>
+        <%else%>
+          <div class="show-logged-out"><strong>Author:</strong>
+          <%= content_tag(:p, author.name, class: 'blur')%>
+          <%= content_tag(:div, 'Log in to see the author!', class:'tooltiptext')%></div>
+        <%end%>
+      </div>
   </div>
   <div class= "pet-tag">
     <%= paw_image_for(post.pettag)%>

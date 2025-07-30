@@ -158,6 +158,11 @@ body {
    padding: 10px;
 }
 
+.show-logged-out{
+   display: flex;
+   gap: 2px;
+}
+
 .post-container {
    border: 3px ridge black;
    border-radius: 10px;
@@ -242,43 +247,46 @@ body {
 
 
 .blur{
-   position: inherit;
+
    filter: blur(5px);
    /* pointer-events: none; */
    user-select: none;
 }
 .tooltiptext {
    visibility: hidden;
-  width: 150px;
+  /* width: 150px; */
   /* height: 30px; */
-  font-size: 0.8rem;
+  /* font-size: 0.8rem; */
   background-color: rgb(0, 0, 0);
   color: #fff;
+   display: flex;
+  position: absolute;
+  left: 65px;
+  border-radius: 5px;
+  justify-items: center;
+  align-items: center;
+  height: 20px;
   text-align: center;
-  border-radius: 6px;
-  padding: 5px;
 
-  position: relative;
-  /* bottom: 38px; */
-  /* top: ; */
   z-index: 1;
-  margin-left: 5px;
-  margin-bottom: 200px;
+
 }
-.author-name:hover .tooltiptext {
+.show-logged-out:hover .tooltiptext {
    visibility: visible;
    transition: 1s;
+   /* position: absolute; */
 
 }
 .setrad-call {
    display: flex;
-   
+   align-items: flex-start;
+   justify-items: flex-start;
    /* grid-template-columns: 1fr; */
    /* align-items: flex-start; */
 }
 .blur {
-   transform: translateX(-420%);
-   position: absolute;
+   /* transform: translateX(-420%); */
+   /* position: absolute; */
 }
 .name {
    margin-left: 5px;
@@ -290,7 +298,8 @@ body {
    align-items: center;
    justify-items: center;
    align-content: center;
-   position: relative;
+   /* flex-direction: column; */
+   /* flex-direction: column; */
 }
 /* LEFT-SIDE CONTENT */
 .left-login a:hover, .create-post-sbmt:hover, .back-post-link:hover, .edit-btn:hover, .delete-post-btn:hover{
